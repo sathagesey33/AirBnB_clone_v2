@@ -11,6 +11,7 @@ env.hosts = ["54.87.157.124", "54.146.73.232"]
 env.user = "ubuntu"
 
 
+@task
 def do_deploy(archive_path):
     """
     Distribute archive.
@@ -56,7 +57,9 @@ def do_deploy(archive_path):
 
 @task
 def deploy():
-    # deploys static file to then servers
+    """
+    deploys the archive file into the server
+    """
     archive_path = do_pack()
     if archive_path is None:
         return False
