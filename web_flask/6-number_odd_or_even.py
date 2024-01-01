@@ -63,7 +63,7 @@ def display_number_template(n):
     with "Number: n" inside the <h1> tag if n is an integer.
     """
     if isinstance(n, int):
-        return render_template('number_template.html', n=n)
+        return render_template('5-number.html', n=n)
     else:
         return 'Not Found', 404
 
@@ -76,7 +76,7 @@ def display_number_odd_or_even(n):
     """
     if isinstance(n, int):
         odd_even = 'even' if n % 2 == 0 else 'odd'
-        return render_template('number_odd_or_even.html',
+        return render_template('6-number_odd_or_even.html',
                                n=n, odd_even=odd_even)
     else:
         return 'Not Found', 404
